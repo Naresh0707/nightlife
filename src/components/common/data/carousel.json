@@ -1,0 +1,32 @@
+
+ { 
+"carouselItems" :[
+  {
+    "imageSrc": "ocean.src",
+    "altText": "Ocean",
+    "caption": "55th ACM Awards to Broadcast live from Live Nashville",
+    "caption1":
+      "The Academy Country music@ Announced that 55th ACADEMY of COUNTRY MUSIC AWARDS will take place in Nashville"
+  },
+  {
+    "imageSrc":" sea.src",
+    "altText": "Sea",
+    "caption": "Exclusive European Roadshow: The Chiron Pur Sport currently",
+    "caption1":
+      "The Academy Country music@ Announced that 55th ACADEMY of COUNTRY MUSIC AWARDS will take place in Nashville"
+  },
+  {
+    "imageSrc": "woman.src",
+    "altText": "Woman",
+    "caption": "Lamborghini unveils new motor yacht Technomar for Lamborghini",
+    "caption1":
+      "TN for the first time, Academy of the Country music @ Announced that the 55TH of the Country Music@ will take place in Nashville"
+  },
+  {
+    "imageSrc": "woman.src",
+    "altText": "Woman",
+    "caption": "Lamborghini unveils new motor yacht Technomar for Lamborghini",
+    "caption1":
+      "TN for the first time, Academy of the Country music @ Announced that the 55TH of the Country Music@ will take place in Nashville"
+  }
+]}

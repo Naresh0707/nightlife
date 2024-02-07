@@ -1,0 +1,17 @@
+{"data":[
+    {
+      "videoSrc": "https://youtu.be/Et7TTfwvBFo",
+      "thumbnailSrc": "https://example.com/thumbnail1.jpg",
+      "caption": "AMC Theatre to begains Reopening of U.S. Theatre.....",
+      "img":"images/Screenshot 2024-01-23 122444.png"
+
+    },
+    {
+      "videoSrc": "https://www.youtube.com/embed/Jfrjeg26Cwk",
+      "thumbnailSrc": "https://example.com/thumbnail2.jpg",
+      "caption": "SUNDANCE 2019 - Record Breaking 14,000+.....",
+      "img":"images/Screenshot 2024-01-23 122552.png"
+    }
+  ]
+  
+}   

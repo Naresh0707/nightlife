@@ -1,0 +1,1995 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../scss/sidenav.scss";
+// @import '../scss/sidebar.scss';
+
+/* header */
+
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+input.nosubmit {
+  padding: 9px 4px 9px 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+  background-color: white;
+  color: rgb(157, 156, 155);
+}
+
+.hov:hover {
+  color: white;
+  .hover {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.add_font {
+  font-family: serif;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 20px;
+  height: 5px;
+  // margin-left: -100px;
+}
+.owl-dots {
+  margin-left: -35px;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 0px !important;
+}
+
+.owl-carousel .owl-stage .owl-item {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.owl-carousel .owl-stage .owl-item.active {
+  opacity: 1;
+}
+
+// sidenav
+.sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #cac8c8;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  padding-top: 10px;
+  // padding: 10px;
+  // padding-right: 15px;
+}
+.Sidenav::-webkit-scrollbar {
+  // width: 0 !important;
+  display: none !important;
+}
+
+.sidebar.open {
+  padding-right: 70px;
+  padding-left: 50px;
+  width: 100%;
+  
+  .openbtn {
+    display: none;
+    z-index: 0;
+
+  }
+}
+
+
+.close-btn {
+  // padding-left: 10px;
+  background-color: #cac8c8;
+  color: aliceblue;
+  padding-bottom: 5px;
+}
+
+
+.group:hover-class:hover {
+  background-color: #555;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: fixed;
+  z-index: 99;
+  top: 15px;
+  // left: 20px;
+  right: 10px;
+  color: white;
+}
+
+.media-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// video icon
+.play-icon-container {
+  width: 20px; // You can adjust the size as needed
+  height: 20px;
+  background-color: white; // Semi-transparent black background
+  border-radius: 50%; // Makes it circular
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); // Subtle shadow for 3D effect
+  margin-top:65px;
+  margin-left:125px
+}
+.play-icon {
+  width: 0;
+  height: 0;
+  // color:black;
+  border-top: 4px solid transparent; // Adjust size as needed
+  border-bottom: 4px solid transparent; // Adjust size as needed
+  border-left: 8px solid black;
+  // This creates the triangle shape
+  margin-left: 3px;
+}
+
+$blue1: rgb(6, 163, 247);
+.blue1 {
+  color: $blue1 !important;
+}
+
+$blue1: rgb(6, 163, 247);
+.blue2 {
+  background-color: $blue1 !important;
+}
+
+$green1: rgb(69, 203, 2);
+.green1 {
+  color: $green1 !important;
+}
+$green1: rgb(69, 203, 2);
+.green2 {
+  background-color: $green1 !important;
+  // padding-right: 20px;
+}
+
+$violet1: rgb(152, 9, 240);
+.violet1 {
+  color: $violet1 !important;
+}
+$violet2: rgb(152, 9, 240);
+.violet2 {
+  background-color: $violet2 !important;
+  // padding-right: 20px;
+}
+
+$gray1: gray;
+.gray1 {
+  color: $gray1 !important;
+}
+// $violet1:rgb(139, 244, 139);
+.gray2 {
+  background-color: $gray1 !important;
+  // padding-right: 20px;
+}
+
+$darkblue1: rgb(2, 2, 56);
+.darkblue1 {
+  color: $darkblue1 !important;
+}
+
+$darkblue1: rgb(2, 2, 56);
+.darkblue2 {
+  background-color: $darkblue1 !important;
+}
+
+$darkgreen1: #08891e;
+.darkgreen1 {
+  color: $darkgreen1 !important;
+}
+
+$brown1: brown;
+.brown1 {
+  color: $brown1 !important;
+}
+
+$brown2: brown;
+.brown2 {
+  background-color: $brown2 !important;
+}
+
+$yellow1: yellow;
+.yellow1 {
+  color: $yellow1 !important;
+}
+
+$sky_blue1: #41c1f4;
+.sky_blue1 {
+  color: $sky_blue1 !important;
+}
+
+$red1: red;
+.red1 {
+  color: $red1 !important;
+}
+
+$orange1: orange;
+.orange1 {
+  color: $orange1 !important;
+}
+
+.order {
+  margin-top: 10px;
+}
+
+.day-position {
+  position: absolute;
+  bottom: 9px;
+}
+
+.order1 {
+  margin-top: -32px;
+  width: 53%;
+}
+
+.day-position1 {
+  position: absolute;
+  bottom: 9px;
+}
+
+// calender
+.red-day {
+  color: red;
+}
+.gray-day {
+  color: gray;
+}
+
+.react-calendar__tile.blue-day {
+  color: blue;
+}
+
+.react-calendar__tile:disabled {
+  color: blue;
+}
+.react-calendar__month-view__weekdays__weekday abbr[title="Sunday"],
+.react-calendar__month-view__weekdays__weekday abbr[title="Saturday"] {
+  color: red;
+}
+.react-calendar {
+  width: 386px !important;
+  border-radius: 2px;
+}
+
+.calendar-container {
+  border-radius: 6px; /* Adjust the value as needed */
+  overflow: hidden; /* Ensure content within the container respects rounded corners */
+}
+
+.react-calendar__navigation {
+  display: flex;
+  background-color: rgb(24, 180, 242);
+  padding: 5px;
+  color: white;
+}
+
+.react-calendar__navigation__arrow {
+  font-size: 29px;
+}
+.react-calendar__month-view__days {
+  margin-right: 12px !important;
+}
+
+.react-calendar__tile--active {
+  background: none !important;
+  color: gray !important;
+}
+.react-calendar__tile--now {
+  background: none !important;
+}
+
+.react-calendar__month-view__weekdays__weekday
+  abbr[title]:not(.react-calendar__month-view__weekdays__weekday--weekend) {
+  text-decoration: none;
+}
+
+
+// musicnews
+
+.music-video-container {
+  position: relative;
+  background-color: black;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  margin: 1.25rem;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+}
+
+.overlay-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 65%;
+  padding: 0.5rem;
+  background-color: black;
+  opacity: 0.75;
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.caption-container {
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.music-videos {
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.max-width-container {
+  max-width: 28rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-container {
+  margin-left: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.title-text {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.title-highlight {
+  color: #8b5cf6;
+}
+.view-all-container {
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.view-all-link {
+  color: #3b82f6;
+}
+
+.video-link {
+  display: block;
+  position: relative;
+}
+
+.video-link:hover .overlay-container {
+  opacity: 0.9;
+}
+
+
+
+/* Add these styles to your existing CSS or create a new CSS file */
+.full-screen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black; /* Set the background color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Adjust the z-index as needed to ensure it's on top of other elements */
+}
+.full-screen-modal button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.full-screen-modal button:hover {
+  color: red; /* Change the color on hover as needed */
+}
+
+// /* You can also add additional styling for the ReactPlayer component */
+// .full-screen-modal .react-player {
+//   /* Add styles as needed */
+// }
+
+// media query
+
+// fold
+
+@media only screen and (min-width: 280px) and (max-width: 374px) {
+  .navbrand{
+    display: none;
+  }
+  .brand-name {
+    display: none;
+  }
+  .Main_add1 {
+    display: none;
+  }
+  .RightSideAdd {
+    display: none;
+  }
+.Home_content{
+  margin-top: -25px;
+}
+  .Home {
+    width: 100%;
+    margin-left: 11px;
+  }
+
+   //  carosul
+
+   .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  .owl-next{
+    margin-top: -45px;
+  }
+  .media-flex {
+    display: block !important;
+  }
+
+  //  home list
+
+  .card-flex {
+    display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 93% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 4%;
+    left: 10%;
+  }
+  .order1 {
+    width: 100%;
+  }
+  .HomeSideList {
+    width: 100%;
+    margin-left: 6px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 100%;
+
+    margin-left: 6px;
+  }
+  .musicnews {
+    width: 100%;
+    margin-left: 3px;
+    .caption{
+      width: 100%;
+    }
+  }
+  .musicvideo {
+    width: 100%;
+    margin-left: 5px;
+    .caption{
+      width: 100%;
+    }
+  }
+
+  .play-icon-container{
+    margin-left: 94px; 
+  }
+  
+  .MonthlyCalendar {
+    width: 98%;
+    margin-left: 5px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 767px) {
+  .navbrand {
+    display: none;
+    // width: 100%;
+  }
+  .openbtn {
+    display: none;
+  }
+  .music-videos {
+    width: 154%;
+    margin-top: 9px;
+    margin-left: 35px;
+}
+}
+
+// @media only screen and (min-width: 1340px) and (max-width: 1366px) {
+//   .navbrand {
+//     display: none;
+//   }
+//   .openbtn {
+//     display: none;
+//   }
+//   .Main_add {
+//     padding-left: 15px;
+//   }
+
+//   .Home_content {
+//     width: 95%;
+//   }
+//   .HomeSideList {
+//     width: 105%;
+//   }
+
+//   .musicnews {
+//     width: 100%;
+//     .caption {
+//       width: 100%;
+//     }
+//   }
+//   .musicvideo {
+//     .caption {
+//       width: 100%;
+//     }
+//   }
+
+//   .owl-next {
+//     margin-top: -29px;
+//     // margin-left: 0%;
+//     // display: none;
+//   }
+//   .position1 {
+//     width: 186px !important;
+//   }
+//   .order1 {
+//     width: 58.8%;
+//   }
+// }
+
+@media only screen and (min-width: 282px) and (max-width: 539px) {
+  .navbrand {
+    display: none;
+  }
+  .brand-name {
+    display: none;
+  }
+  .Main_add1 {
+    display: none;
+  }
+  .RightSideAdd {
+    display: none;
+  }
+  .Home {
+    width: 100%;
+    margin-left: 15px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  .Home_content {
+    margin-top: -30px;
+  }
+  //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  .media-flex {
+    display: block !important;
+  }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -45px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 93% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 4%;
+    left: 10%;
+  }
+  .order1 {
+    width: 100%;
+  }
+
+  .HomeSideList {
+    width: 100%;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 100%;
+
+    margin-left: 6px;
+  }
+  .musicnews {
+    width: 100%;
+    margin-left: 2px;
+  }
+  .musicvideo {
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  .play-icon-container{
+    margin-left: 140px; 
+  }
+  
+  .MonthlyCalendar {
+    width: 98%;
+    margin-left: 5px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+  .navbrand {
+    display: none;
+  }
+  .brand-name {
+    display: none;
+  }
+  .Main_add1 {
+    display: none;
+  }
+  .RightSideAdd {
+    display: none;
+  }
+  .Home {
+    width: 100%;
+    margin-left: 15px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  .Home_content {
+    margin-top: -30px;
+  }
+  //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  .media-flex {
+    display: block !important;
+  }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -45px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .image{
+    // margin-left: 10px;
+    width: 100%;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 94.5% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 4%;
+    left: 10%;
+  }
+  .order1 {
+    width: 100%;
+  }
+
+  .HomeSideList {
+    width: 100%;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    // width: 100%;
+    margin-left: 54px;
+  }
+  .musicnews {
+    width: 88%;
+    margin-left: 30px;
+  }
+  .musicvideo {
+    width: 90%;
+    margin-left: 27px;
+  }
+
+  .play-icon-container{
+    margin-left: 156px;
+  }
+  .MonthlyCalendar {
+    width: 78%;
+    margin-left: 60px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1400px) {
+  .main-div{
+    padding-left: 60px;
+    padding-right: 100px;
+  }
+  .RightSideAdd{
+    right: 2.5% !important;
+    width: 14%;
+  }
+
+  .Main_add {
+    padding-left: 25px;
+    height: 10%;
+    // width: 100%;
+  }
+  
+  .HomeSideList {
+    margin-left: 8px;
+    width: 108%;
+  }
+  // .Home_content{
+  //   // width: 100%;
+    
+  // }
+  .max-h{
+    height: 100%;}
+
+  .owl-next {
+    margin-top: -29px;
+    // margin-left: 0%;
+    // display: none;
+  }
+  .position1 {
+    width: 170px !important;
+  }
+  .order1 {
+    width: 58.6%;
+  }
+
+  .LatestMusicRelease{
+    width: 100%;
+
+  }
+
+  .musicnews {
+    width: 100%;
+    .caption {
+      width: 90%;
+      font-size: 15px;
+    }
+  }
+  .musicvideo {
+    width: 100%;
+    .caption {
+      width: 100%;
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1401px)and (max-width: 1499px) {
+  .main-div{
+    padding-left: 50px;
+    padding-right: 100px;
+  }
+  .RightSideAdd{
+    right: 4.5% !important;
+  }
+
+  .Main_add {
+    padding-left: 25px;
+    // height: 10%;
+    // width: 100%;
+  }
+  // .Home_content{
+  //   // width: 100%;
+    
+  // }
+  .max-h{
+    height: 100%;
+
+  }
+  
+  .HomeSideList {
+    margin-left: 8px;
+    width: 115%;
+  }
+  .owl-next {
+    margin-top: -29px;
+    // margin-left: 0%;
+    // display: none;
+  }
+  .position1 {
+    width: 170px !important;
+  }
+  .order1 {
+    width: 58.6%;
+  }
+
+  .LatestMusicRelease{
+    width: 100%;
+
+  }
+
+  .musicnews {
+    width: 100%;
+    .caption {
+      width: 90%;
+      font-size: 15px;
+    }
+  }
+  .music-videos {
+    width: 101%;
+    margin-top: 9px;
+    margin-left: 3px;
+}
+}
+
+
+@media only screen and (min-width: 1499px) {
+  .main-div{
+    padding-left: 100px;
+    padding-right: 250px;
+  }
+  .RightSideAdd{
+    right: 8% !important;
+  }
+
+  .HomeSideList {
+    margin-left: 8px;
+    width: 121%;
+  }
+
+  .Main_add {
+    padding-left: 29px;
+    // height: 10%;
+    width: 100%;
+  }
+
+  .max-h{
+    height: 100%;
+
+  }
+
+  .owl-next {
+    margin-top: -25px;
+    // margin-left: 0%;
+    // display: none;
+  }
+  .position1 {
+    width: 175px !important;
+  }
+  .order1 {
+    width: 52.7%;
+    height: 10%;
+    margin-top: -72px;
+  }
+
+  .LatestMusicRelease{
+    width: 100%;
+
+    .text{
+      font-size: 14px;
+    }
+  }
+
+  .musicnews {
+    width: 100%;
+    .caption {
+      width: 90%;
+      font-size: 15px;
+    }
+  }
+  .music-videos {
+    width: 100%;
+    margin-top: 9px;
+    margin-left: 3px;
+}
+
+  // .play-icon{
+  //   margin-left: 1px;
+  // }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 819px) {
+  .navbrand {
+    display: none;
+  }
+  .Header{
+    width: 100%;
+  }
+  // .brand-name {
+  //   display: none;
+  // }
+  .sec{
+   width:  149%;
+  }
+  .width{
+    width: 85%;
+  }
+  #default-sidebar{
+    // top: 0%;
+    // margin-top: 10px;
+    margin-top: -20px;
+  }
+  .Main_add1 {
+    // display: none;
+    margin-left: 130px;
+    width: 100%;
+    .main-head{
+      font-size: 10px;
+      width: 100%;
+    }
+  }
+  // .RightSideAdd {
+  //   display: none;
+  // }
+  .main-div{
+    width: 100%;
+    // margin-top: 10px;
+ 
+  }
+  .Home {
+    width: 77%;
+    margin-left: 129px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  // .Home_content {
+  //   // margin-top: -30px;
+  // }
+  // //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  .media-flex {
+    display: block !important;
+  }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -45px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 84% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .day-position{
+    font-size: 10px;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 4%;
+    left: 10%;
+  }
+  .order1 {
+    width: 70%;
+  }
+// side list
+  .HomeSideList {
+    width: 100%;
+    margin-left: -10px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 156%;
+
+    margin-left: 35px;
+  }
+  .musicnews {
+    width: 124%;
+    margin-left: 18px;
+    .caption{
+      width: 100%;
+    }
+  }
+  .music-videos {
+    width: 154%;
+    margin-top: 9px;
+    margin-left: 35px;
+}
+  .play-icon-container{
+    margin-left: 132px;
+  }
+  .MonthlyCalendar {
+    width: 150%;
+    margin-left: 36px;
+  }
+}
+@media only screen and (width: 820px)  {
+   .sm\:col-span-3 {
+    grid-column: span 12 !important;
+  }
+
+  // .sec{
+  //   width:  149%;
+  //  }
+  //  .width{
+  //    width: 85%;
+  //  }
+   #default-sidebar{
+     // top: 0%;
+     // margin-top: 10px;
+     margin-top: -20px;
+   }
+   .RightSideAdd{
+    display: block;
+   }
+   .Main_add1 {
+    //  display: none;
+     margin-left: 141px;
+     width: 88%;
+     .main-head{
+       font-size: 15px;
+       width: 100%;
+     }
+     .min-w{
+      height: 189px;
+     }
+    //  .add{
+    //   height: 100px;
+    //  }
+  //    .max-h{
+  //     width: 100%}
+   }
+   .main-div{
+     width: 100%;
+     // margin-top: 10px;
+  
+   }
+   .Home {
+     width: 99%;
+     margin-left: 143px;
+   }
+   .Header {
+     padding-bottom: 15px;
+   } 
+   .trending {
+     height: auto;
+   }
+   .owl-head {
+     font-size: 13px;
+     padding-top: 10px;
+   }
+   .owl-theme {
+     font-size: 15px;
+   }
+  //  .media-flex {
+  //    display: block !important;
+  //  }
+ 
+   .owl-text {
+     font-size: 10px;
+     width: 100%;
+     left: 0%;
+   }
+   .owl-next {
+     margin-top: -43px;
+     // margin-left: 0%;
+     // display: none;
+   }
+ 
+   //  home list
+ 
+   .card-flex {
+    //  display: block !important;
+     height: 100%;
+     padding-bottom: 1.75rem;
+   }
+   .title {
+     font-size: 15px;
+     width: 100%;
+   }
+   .lin {
+     font-size: 12px;
+   }
+   .phara {
+     font-size: 13px;
+   }
+   .view {
+     font-size: 15px;
+     width: 150%;
+     margin-top: 5px;
+   }
+   .view1 {
+     margin-top: 10px;
+   }
+ 
+   // photogalary
+   .photo {
+     width: 100%;
+   }
+   .position1 {
+     width: 86% !important;
+   }
+   .handleNext {
+     z-index: 1;
+   }
+   .handlePrev {
+     z-index: 1;
+   }
+   .day-position{
+    font-size: 11px;
+   }
+   .show {
+     top: 4%;
+     left: 10%;
+   }
+   .order1 {
+     width: 98%;
+   }
+ // side list
+   .HomeSideList {
+     width: 100%;
+     margin-left: 4px;
+     padding-bottom: 10px;
+   }
+ 
+   .LatestMusicRelease {
+     width: 120%;
+ 
+     margin-left: 162px;
+   }
+   .musicnews {
+     width: 70%;
+     margin-left: 85px;
+    //  .caption{
+    //   //  width: 100%;
+    //  }
+   }
+   .music-videos {
+    width: 49%;
+    margin-top: 9px;
+    margin-left: 169px;
+}
+   .play-icon-container{
+     margin-left: 146px;
+   }
+   .MonthlyCalendar {
+     width: 48%;
+     margin-left: 171px;
+   }
+   .react-calendar {
+     width: 100%;
+   }
+ 
+   // .sec{
+   //   wid
+   // }
+}
+
+
+@media only screen and (min-width: 821px)and (max-width: 913px)  {
+  // .sm\:col-span-3 {
+  //   grid-column: span 12 !important;
+  // }
+
+  .sec{
+    width:  149%;
+   }
+   .width{
+     width: 85%;
+   }
+   #default-sidebar{
+     // top: 0%;
+     // margin-top: 10px;
+     margin-top: -20px;
+   }
+   .Main_add1 {
+    //  display: none;
+     margin-left: 130px;
+     width: 100%;
+     .main-head{
+       font-size: 15px;
+       width: 100%;
+     }
+   }
+   .main-div{
+     width: 100%;
+     // margin-top: 10px;
+  
+   }
+   .Home {
+     width: 100%;
+     margin-left: 129px;
+   }
+   .Header {
+     padding-bottom: 15px;
+   }
+  //  .Home_content {
+  //    // margin-top: -30px;
+  //  }
+  //  //  carosul
+ 
+   .trending {
+     height: auto;
+   }
+   .owl-head {
+     font-size: 13px;
+     padding-top: 10px;
+   }
+   .owl-theme {
+     font-size: 15px;
+   }
+  //  .media-flex {
+  //   //  display: block !important;
+  //  }
+ 
+   .owl-text {
+     font-size: 10px;
+     width: 100%;
+     left: 0%;
+   }
+   .owl-next {
+     margin-top: -20px;
+     // margin-left: 0%;
+     // display: none;
+   }
+ 
+   //  home list
+ 
+   .card-flex {
+    //  display: block !important;
+     height: 100%;
+     padding-bottom: 1.75rem;
+   }
+   .title {
+     font-size: 15px;
+     width: 100%;
+   }
+   .lin {
+     font-size: 12px;
+   }
+   .phara {
+     font-size: 13px;
+   }
+   .view {
+     font-size: 15px;
+     width: 150%;
+     margin-top: 5px;
+   }
+   .view1 {
+     margin-top: 10px;
+   }
+ 
+   // photogalary
+   .photo {
+     width: 100%;
+   }
+   .position1 {
+     width: 89% !important;
+   }
+   .handleNext {
+     z-index: 1;
+   }
+   .handlePrev {
+     z-index: 1;
+   }
+   .show {
+     top: 4%;
+     left: 10%;
+   }
+   .order1 {
+     width: 59%;
+   }
+ // side list
+   .HomeSideList {
+     width: 100%;
+     margin-left: -10px;
+     padding-bottom: 10px;
+   }
+ 
+   .LatestMusicRelease {
+     width: 120%;
+ 
+     margin-left: 162px;
+   }
+   .musicnews {
+     width: 109%;
+     margin-left: 83px;
+    //  .caption{
+    //   //  width: 100%;
+    //  }
+   }
+   .music-videos {
+    width: 121%;
+    margin-top: 9px;
+    margin-left: 161px;
+}
+   .play-icon-container{
+     margin-left: 126px;
+   }
+   .MonthlyCalendar {
+     width: 117%;
+     margin-left: 168px;
+   }
+   .react-calendar {
+     width: 100%;
+   }
+ 
+   // .sec{
+   //   wid
+   // }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1025px) {
+
+  // .sm\:col-span-3 {
+  //   grid-column: span 12 !important;
+  // }
+  .navbrand {
+    display: none;
+  }
+  .Header{
+    width: 100%;
+  }
+  .width{
+    width: 85%;
+  }
+
+  .Main_add1 {
+    // display: none;
+    margin-left: 55px;
+    // margin-top: -20px;
+    width: 110%;
+    .main-head{
+      font-size: 22px;
+      width: 100%;
+    }
+    .main-head1{
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+
+  
+  .RightSideAdd {
+    display: none;
+    top: 20%
+
+  }
+  .main-div{
+    width: 100%;
+  }
+  .Home {
+    width: 120%;
+    margin-left: 55px;
+    margin-top: 40px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  .Home_content {
+    margin-top: -30px;
+  }
+  //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  // .media-flex {
+  //   display: block !important;
+  // }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -30px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    // display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 88% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 0%;
+    left: 10%;
+    z-index: 1;
+  }
+  .order1 {
+    width: 78%;
+  }
+
+  .HomeSideList {
+    width: 100%;
+    margin-left: 110px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 156%;
+
+    margin-left: 37px;
+  }
+  .musicnews {
+    width: 128%;
+    margin-left: 18px;
+    .caption{
+      font: optional;
+      width: 100%;
+    }
+  }
+  .music-videos {
+    width: 161%;
+    margin-top: 9px;
+    margin-left: 39px;
+}
+  .MonthlyCalendar {
+    width: 168%;
+    margin-left: 36px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1286px) {
+  .navbrand {
+    display: none;
+  }
+  .Header{
+    width: 100%;
+  }
+
+  .width{
+    width: 85%;
+  }
+  .Main_add1 {
+    margin-left: 47px;
+    width: 100%;
+    .main-head{
+      // height: 100%;
+      font-size: 22px;
+    }
+    .main-head1{
+      // height: 100%;
+      font-size: 14px;
+    }
+  }
+  .RightSideAdd {
+    display: block;
+  }
+  .main-div{
+    width: 100%;
+  }
+  .Home {
+    width: 110%;
+    margin-left: 42px;
+    margin-top: 40px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  .Home_content {
+    margin-top: -30px;
+  }
+  //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  // .media-flex {
+  //   display: block !important;
+  // }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -20px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    // display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 88% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 0%;
+    left: 10%;
+    z-index: 1;
+  }
+  .order1 {
+    width: 62.5%;
+  }
+
+  .HomeSideList {
+    width: 80%;
+    margin-left: 80px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 156%;
+
+    margin-left: 35px;
+  }
+  .musicnews {
+    width: 126%;
+    margin-left: 18px;
+    .caption{
+      font: optional;
+      width: 100%;
+    }
+  }
+  .musicvideo {
+    width: 126%;
+    margin-left: 20px;
+    .caption{
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  .MonthlyCalendar {
+    width: 160%;
+    margin-left: 36px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1367px) {
+  .navbrand {
+    display: none;
+  }
+  .Header{
+    width: 100%;
+  }
+
+  .width{
+    width: 85%;
+  }
+  .Main_add1 {
+    margin-left: 27px;
+    width: 100%;
+    .main-head{
+      // height: 100%;
+      font-size: 22px;
+    }
+    .main-head1{
+      // height: 100%;
+      font-size: 14px;
+    }
+  }
+  .RightSideAdd {
+    display: block;
+  }
+  .main-div{
+    width: 100%;
+  }
+  .Home {
+    width: 114%;
+    margin-left: 27px;
+    margin-top: 40px;
+  }
+  .Header {
+    padding-bottom: 15px;
+  }
+  .Home_content {
+    margin-top: -30px;
+  }
+  //  carosul
+
+  .trending {
+    height: auto;
+  }
+  .owl-head {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .owl-theme {
+    font-size: 15px;
+  }
+  // .media-flex {
+  //   display: block !important;
+  // }
+
+  .owl-text {
+    font-size: 10px;
+    width: 100%;
+    left: 0%;
+  }
+  .owl-next {
+    margin-top: -20px;
+    // margin-left: 0%;
+    // display: none;
+  }
+
+  //  home list
+
+  .card-flex {
+    // display: block !important;
+    height: 100%;
+    padding-bottom: 1.75rem;
+  }
+  .title {
+    font-size: 15px;
+    width: 100%;
+  }
+  .lin {
+    font-size: 12px;
+  }
+  .phara {
+    font-size: 13px;
+  }
+  .view {
+    font-size: 15px;
+    width: 150%;
+    margin-top: 5px;
+  }
+  .view1 {
+    margin-top: 10px;
+  }
+
+  // photogalary
+  .photo {
+    width: 100%;
+  }
+  .position1 {
+    width: 88% !important;
+  }
+  .handleNext {
+    z-index: 1;
+  }
+  .handlePrev {
+    z-index: 1;
+  }
+  .show {
+    top: 0%;
+    left: 10%;
+    z-index: 1;
+  }
+  .order1 {
+    width: 62.5%;
+  }
+
+  .HomeSideList {
+    width: 80%;
+    margin-left: 80px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .LatestMusicRelease {
+    width: 169%;
+
+    margin-left: 35px;
+  }
+  .musicnews {
+    width: 130%;
+    margin-left: 18px;
+    .caption{
+      font: optional;
+      width: 100%;
+    }
+  }
+  .musicvideo {
+    width: 129%;
+    margin-left: 20px;
+    .caption{
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  .MonthlyCalendar {
+    width: 167%;
+    margin-left: 40px;
+  }
+  .react-calendar {
+    width: 100%;
+  }
+}
+
+
