@@ -1,101 +1,9 @@
-// export default MusicVideos; working1
-// import React, { useState, useRef, useEffect } from "react";
-// import ReactPlayer from "react-player";
-// import { data } from "../common/data/MusicVideos.json";
-
-// const MusicVideos = () => {
-//   const [selectedVideo, setSelectedVideo] = useState(null);
-//   const [isFullScreen, setIsFullScreen] = useState(false);
-//   const playerRef = useRef(null);
-
-//   const openFullScreen = (video) => {
-//     setSelectedVideo(video);
-//     setIsFullScreen(true);
-//     document.body.style.overflow = "hidden"; // Prevent scrolling when in full screen
-//   };
-
-//   const closeFullScreen = () => {
-//     setSelectedVideo(null);
-//     setIsFullScreen(false);
-//     document.body.style.overflow = ""; // Allow scrolling when exiting full screen
-//   };
-
-//   useEffect(() => {
-//     const handleKeyDown = (event) => {
-//       if (event.key === "Escape" && isFullScreen) {
-//         closeFullScreen();
-//       }
-//     };
-
-//     // Add event listener when the component mounts
-//     document.addEventListener("keydown", handleKeyDown);
-
-//     // Remove event listener when the component unmounts
-//     return () => {
-//       document.removeEventListener("keydown", handleKeyDown);
-//     };
-//   }, [isFullScreen]);
-
-//   return (
-//     <div className="music-videos">
-//       <div className="max-width-container">
-//         {data.map((video, index) => (
-//           <div key={index} className="music-video-container">
-//             <div
-//               className="video-thumbnail"
-//               onClick={() => openFullScreen(video)}
-//             >
-//               <ReactPlayer
-//                 ref={playerRef}
-//                 url={video.videoSrc}
-//                 controls={false}
-//                 width="100%"
-//                 height="100%"
-//                 onPause={closeFullScreen}
-//                 config={{
-//                   youtube: {
-//                     playerVars: { showinfo: 1, controls: 0 },
-//                   },
-//                 }}
-//               />
-//               <div className="overlay-container">
-//                 <div className="caption-container">
-//                   <p className="tracking-tight text-gray-200 text-sm caption-container">
-//                     {video.caption}
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {isFullScreen && selectedVideo && (
-//         <div className="full-screen-modal">
-//           <button
-//             onClick={closeFullScreen}
-//             className="absolute top-4 right-4 text-white text-2xl"
-//           >
-//             &times;
-//           </button>
-//           <ReactPlayer
-//             ref={playerRef}
-//             url={selectedVideo.videoSrc}
-//             controls={true}
-//             width="100vw"
-//             height="100vh"
-//             onEnded={closeFullScreen}
-//           />
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default MusicVideos;
+"use client"
 
 import React, { useState, useRef, useEffect } from "react";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 import { data } from "../common/data/MusicVideos.json";
 
 const MusicVideos = () => {
@@ -106,21 +14,15 @@ const MusicVideos = () => {
   const openFullScreen = (video) => {
     setSelectedVideo(video);
     setIsFullScreen(true);
-    document.body.style.overflow = "hidden"; // Prevent scrolling when in full screen
+    document.body.style.overflow = "hidden"; 
   };
 
   const closeFullScreen = () => {
     setSelectedVideo(null);
     setIsFullScreen(false);
-    document.body.style.overflow = ""; // Allow scrolling when exiting full screen
+    document.body.style.overflow = ""; 
   };
 
-  // const playVideo = () => {
-  //   if (playerRef.current) {
-  //     playerRef.current.getInternalPlayer().playVideo(); // Use playVideo() for YouTube
-  //     // For other sources, use: playerRef.current.getInternalPlayer().play();
-  //   }
-  // };
 
   const seekBackward = () => {
     if (playerRef.current) {
@@ -206,11 +108,7 @@ const MusicVideos = () => {
           >
             &gt;&gt; {/* Forward icon */}
           </button>
-          {/* <div className="video-controls">
-            <button onClick={playVideo} className="control-button">
-              Play
-            </button>
-          </div> */}
+ 
           <ReactPlayer
             ref={playerRef}
             url={selectedVideo.videoSrc}
@@ -226,8 +124,3 @@ const MusicVideos = () => {
 };
 
 export default MusicVideos;
-
-
-
-
-

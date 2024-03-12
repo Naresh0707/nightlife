@@ -1,3 +1,4 @@
+"use client"
 import Carousel from "./Carousel";
 import HomeContent from "./card/HomeContent";
 export default function Home({name}:any) {

@@ -1,5 +1,4 @@
-// import React from "react";
-import Image from "next/image";
+"use client"
 import React, { useState } from "react";
 import ocean from "../../../public/images/Screenshot 2024-01-13 111232.png";
 import sea from "../../../public/images/Screenshot 2024-01-13 111257.png";

@@ -11,7 +11,9 @@
   "dependencies": {
     "@types/react-slick": "^0.23.13",
     "@types/video.js": "^7.3.56",
+    "axios": "^1.6.7",
     "jquery": "^3.7.1",
+    "mongoose": "^8.2.1",
     "next": "14.0.4",
     "node-sass": "^9.0.0",
     "react": "^18",

@@ -1,28 +1,23 @@
-"use client";
-
-import Image from "next/image";
+"use client"
 import Header from "../components/common/Header";
 import Sidenav from "../components/common/SideNav";
-import Main_add from "../components/common/advertise/MainAdd";
+import GoogleAds from "../components/common/advertise/MainAdd";
 import Home from "@/components/home/Home";
+import Ad from "@/components/common/advertise/ad";
 import PhotoGallery from "@/components/home/PhotoGallery";
 import HomeSideList from "@/components/homesidelist/HomeSideList";
 import RightSideAdd from "@/components/common/advertise/RightSideAdd";
 
-import { useEffect, useState } from "react";
-import Head from "next/head";
-import dynamic from "next/dynamic";
-
 export default function Page() {
   // const [domaini, setDomaini] = useState("")
-  useEffect(() => {
-    (async () => {
-      const domain = window.location.href;
-      domain === "http://localhost:3000/"
-        ? await import("../scss/domain1.scss")
-        : await import("../scss/domain2.scss")
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const domain = window.location.href;
+  //     domain === "http://localhost:3000/"
+  //       ? await import("../scss/domain1.scss")
+  //       : await import("../scss/domain2.scss")
+  //   })();
+  // }, []);
 
   return (
     <>
@@ -41,7 +36,8 @@ export default function Page() {
 
             <div className="col-span-11 lg:ms-20 Main_add">
               <div className="Main_add1">
-              <Main_add />
+              {/* <GoogleAds adSlot="5928912620"/> */}
+              <Ad />
               </div>
               
 

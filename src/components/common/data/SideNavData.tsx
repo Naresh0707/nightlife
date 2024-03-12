@@ -3,7 +3,8 @@
           "id": 1,
           "nav_name": "HOME",
           "svg": 'images/image_2024_01_04T07_41_20_649Z.png',
-          "color":"green"
+          "color":"green",
+          "link":"/"
         },
         {
           "id": 2,
@@ -21,7 +22,8 @@
           "id": 4,
           "nav_name": "VIDEOS",
           "svg": "/images/image_2024_01_04T07_41_48_909Z.png",
-          "color":"gray"
+          "color":"gray",
+          "link":"/video"
         },
         {
           "id": 5,

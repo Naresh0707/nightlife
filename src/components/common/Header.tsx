@@ -1,7 +1,9 @@
+"use client"
+
 import Image from "../../../public/images/image_2024_01_04T07_43_04_958Z.png";  
 export default function Header() {
   return (
-    <div className=" header_color flex "> 
+    <div className=" header_color flex header_color"> 
       <div className=" grid grid-cols-12 pt-2 pb-2">
         <div className=" flex-initial w-64 col-span-2 sm:col-12">
           <img className="ms-3 mt-5" src={Image.src} />

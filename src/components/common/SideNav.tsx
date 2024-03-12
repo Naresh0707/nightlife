@@ -1,5 +1,7 @@
+"use client"
 import React, { useState } from 'react';
 import { data } from "./data/SideNavData";
+import Link from 'next/link';
 
 const Sidenav = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -70,8 +72,8 @@ const Sidenav = () => {
                 key={a.id}
                 className={`group pt-1 bg-gray-100 ${a.color} dark:bg-gray-800 group  hover-class hov`}
               >
-                <a
-                  href="#"
+                <Link
+                  href={`${a.link}`}
                   data-id={`#${a.id}`}
                   className={`border-l-2 flex items-center p-2`}
                   style={{ borderColor: a.color }}
@@ -79,7 +81,7 @@ const Sidenav = () => {
                 >
                   <img src={a.svg} className="hover" alt={a.nav_name} />
                   <span className="ms-3 ">{a.nav_name}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

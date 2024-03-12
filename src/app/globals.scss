@@ -2,10 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "../scss/sidenav.scss";
+@import "../scss/domain1.scss";
 // @import '../scss/sidebar.scss';
 
 /* header */
 
+.hover-parent:hover .child-text {
+  text-decoration: underline;
+}
+// .Main_add1{
+//   height: 4% !important;
+// }
 
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
@@ -50,6 +57,8 @@ input.nosubmit {
 .owl-carousel .owl-stage .owl-item.active {
   opacity: 1;
 }
+
+
 
 // sidenav
 .sidebar::-webkit-scrollbar {
@@ -1993,3 +2002,67 @@ $orange1: orange;
 }
 
 
+// video
+.share-icon:hover{
+  border: blue solid 1px;
+  background-color: white;
+  .icon-color{
+    fill: blue;
+  }
+  h1{
+    color: blue;
+  }
+}
+
+.like-icon:hover{
+  .icon-hover {
+    fill: blue;
+  }
+  h1{
+    color: blue;
+  }
+}
+
+
+// miniside
+
+.navigation-panel {
+  height: 100%;
+  width: 0;
+  // position: fixed;
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(121, 121, 251); /* Dark background for the nav */
+  overflow-x: hidden; /* Hide horizontal scroll */
+  transition: 0.5s; /* Smooth transition */
+  padding-top: 60px; /* Space for content */
+}
+
+.navigation-panel.expanded {
+  width: 100%; /* Expand to 250px */
+}
+
+.toggle-button {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: blue;
+  border-radius: 50px;
+  // position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px 20px; /* Adjust padding to increase size */
+  font-size: 20px; 
+  z-index: 999; /* Ensure button is always clickable */
+}
+
+.content-area {
+  transition: margin-left 0.5s; /* Smooth transition for the content area */
+  padding: 20px;
+}
+
+.navigation-panel.expanded ~ .content-area {
+  margin-left: 50px; /* Adjust content area when nav is expanded */
+}
+////////// END NAVIGATION PANEL /////////
